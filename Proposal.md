@@ -2,7 +2,9 @@
 
 ## Heading
 Project Name - SkeleVison 
+
 Team Name - The Boneheads
+
 Team Members - Mylon Jones, Ryan Trenner, Scott Gibson
 
 ## Introduction
