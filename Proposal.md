@@ -1,7 +1,9 @@
 # Skull-Scan
 
 ## Heading
-TBD
+Project Name - SkeleVison 
+Team Name - The Boneheads
+Team Members - Mylon Jones, Ryan Trenner, Scott Gibson
 
 ## Introduction
 
@@ -46,8 +48,9 @@ The success of our endeavor will be measured by the accuracy and breadth of our 
 
 ## Team
 ### Skills:
-  * Has anyone on the team built something like this before? 
-  * Are the tools known or new to the team?
+  * We all are relatively new to machine learning/AI. 
+  * The tools we will be using are new to the team.
+  * We all have entry level skills in Python, but none of us have used an LLM before. 
     
 ### Roles:
   * What are the roles of the team members? 
