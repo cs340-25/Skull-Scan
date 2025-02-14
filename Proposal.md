@@ -55,8 +55,9 @@ The success of our endeavor will be measured by the accuracy and breadth of our 
   * We all have entry level skills in Python, but none of us have used an LLM before. 
     
 ### Roles:
-  * What are the roles of the team members? 
-  * Will the roles be fixed or rotating? 
+  * Ryan Trenner: Head of Project Research
+  * Mylon Jones: Head of Project Management
+  * Scott Gibson: Head of Project Technology 
 
 
 ## Project Management
