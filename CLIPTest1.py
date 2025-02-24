@@ -1,3 +1,4 @@
+# Zero-Shot Prediction
 import os
 import clip
 import torch
