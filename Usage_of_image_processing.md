@@ -1,7 +1,7 @@
 ## How to use the script
 # Organize the images: 
 Place the images in subdirectories within a main directory, where each subdirectory represents a class. For example:
-
+```
 images/
 ├── class1/
 │   ├── image1.jpg
@@ -12,7 +12,7 @@ images/
 │   ├── image2.jpg
 │   └── ...
 └── ...
-
+```
 # Run the script: 
 Use the command line to run the script, specifying the input directory and the output file name:
 
@@ -30,7 +30,7 @@ The script will automatically assign labels based on the names of the subdirecto
   * It will then process the images in each subdirectory, resize them, and assign a numerical label based on the order of the subdirectories.
 
 For example, if your directory structure is like this:
-
+```
 images/
 ├── cats/
 │   ├── cat1.jpg
@@ -44,7 +44,7 @@ images/
     ├── bird1.jpg
     ├── bird2.jpg
     └── ...
-
+```
   * The subdirectory cats will be assigned the label 0.
   * The subdirectory dogs will be assigned the label 1.
   * The subdirectory birds will be assigned the label 2.
