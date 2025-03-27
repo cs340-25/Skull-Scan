@@ -31,3 +31,6 @@ the main csv file is in the default directory
 `master_dataset_w_ADD.csv.gz`
 
 forMylon has some head image paths.
+
+## Huggingface Tutorial
+https://huggingface.co/learn/nlp-course/chapter1/1
