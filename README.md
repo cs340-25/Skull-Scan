@@ -14,6 +14,9 @@ This site has a lot of data sets to work with.
 
 ## Using the Database
 
+* first run `ssh -L3047:192.168.32.201:3047 mjone323@da2.eecs.utk.edu` to forward the right port to your local computer.
+* then in a separate temrinal run `ssh -p3047 -L3000:localhost:3000 anau@localhost` gain access to the machine with the database.
+
 To get image html path use browse in icputrd and click image and keep clicking images.
 
 images are in `/opt/mean.js/public`
