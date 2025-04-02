@@ -24,6 +24,6 @@ gzip -dc "$gz_file" | awk -F',' 'BEGIN { OFS="," }
         # Print only the required columns
         print $1,$2,$3,$4,$15,$16,$17,$18,$19,$20,$21,$22,$23
         #print $21
-    }' > stg3heads.csv
+    }' > stg1heads.csv
 
-echo "Filtered results saved to stg3heads.csv"
+echo "Filtered results saved to stg1heads.csv"
