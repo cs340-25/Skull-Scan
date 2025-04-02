@@ -34,3 +34,10 @@ forMylon has some head image paths.
 
 ## Huggingface Tutorial
 https://huggingface.co/learn/nlp-course/chapter1/1
+
+## Extracted data 
+The shell scripts extract the images from the .gz file and put them into seprate .csv files so we can run the model on this data
+- `dataExtractor.sh` -> takes all stage 4-6 head images and puts into `stg4heads.csv`
+- `extractHead3.sh` -> takes all stage 1 head images and puts into `stg1heads.csv`
+
+
