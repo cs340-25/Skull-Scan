@@ -1,5 +1,5 @@
 # Skull Scan
-This is a set of software that classifies images using libraries and model from Hugging Face Hub
+This is a set of software that classifies images using libraries and model from Hugging Face Hub.
 The first goal is for this software to accurately identify whether an image of a head is fresh or skeletal.
 The stretch goal is to match a pair of image by identifying if a picture of a skull and a fresh head are of the same person.
 
