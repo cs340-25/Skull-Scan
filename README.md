@@ -10,8 +10,10 @@ Instructions for that can be found here: [Usage_of_image_Processing.md](/Usage_o
 ## Using the Database
 
 The data we are fine-tuning a model with is located on one of Dr. Mockus's machines and accessible over SSH.
+You will need to have your UTK VPN activated to access Mockus's machines from home.
+You will also need to create a ssh key pair. (checkout the git tutorial linked below)
 
-We have gone through many slightly different ways to connect.
+Here are the commands to connect.
 * To server the web tool run `ssh -p3047 -L3000:localhost:3000 anau@da1.eecs.utk.edu` and navigate to localhost:3000 in your web browser.
 * To use are docker container run `ssh anau@da6.eecs.utk.edu`
 
@@ -35,6 +37,8 @@ The shell scripts extract the images from the .gz file and put them into seprate
 
 This site has a lot of data sets to work with.
 [kaggle.com](https://www.kaggle.com/datasets/aladdinpersson/flickr8kimagescaptions)
+
+[Set up ssh tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 Mockus used `zcat master_dataset_w_ADD.csv.gz|grep ,head, |cut -d, -f4| sort -R | head -300 > forMylon`
 to copy data from csv file
