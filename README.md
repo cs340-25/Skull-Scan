@@ -51,4 +51,13 @@ the main csv file is in the default directory
 
 forMylon has some head image paths.
 
+start docker 
+docker run -it -p 3050:22 -p 8886:8888 -p 6004:6006 -v /home/anau/:/home/anau/ --name skull huggingface/transformers-pytorch-cpu bash
+
+command to copy files
+cut -d, -f4 ../stg4heads.csv | grep JPG | while read i; do cp $i .; done
+
+cammand to run example fine-tuner (must be run in image-classification folder)
+python run_image_classification.py --train_dir ../database --output_dir ../model/ --remove_unused_columns False --do_train --do_eval
+
 
