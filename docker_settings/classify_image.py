@@ -1,15 +1,18 @@
-from datasets import load_dataset
+from transformers import pipeline
+import argparse
 from PIL import Image, ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
-#ds = load_dataset("imagefolder", data_dir=<path-to-image-data>, split="train[:10]")
 
-#image = ds["image"][0]
-fileName = input("enter image path: ")
-image =  Image.open(fileName)
+parser = argparse.ArgumentParser()
+parser.add_argument('--model', help="specify path to model", type=str, default="./model")
+parser.add_argument('imagePath', help="specify path to image you want to classify", type=str)
 
+args = parser.parse_args()
 
-from transformers import pipeline
+classifier = pipeline("image-classification", model=args.model)
 
-classifier = pipeline("image-classification", model="./model")
-
-print(classifier(image))
+try :
+    image =  Image.open(args.imagePath)
+    print(classifier(image))
+except :
+    print("couldn't classify imate")
