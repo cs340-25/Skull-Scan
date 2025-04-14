@@ -20,7 +20,7 @@ gzip -dc "$gz_file" | awk -F',' 'BEGIN { OFS="," }
         # Print only the required headers
         print "new_id,old_id,img_path,img,true_BP,pred_BP,pred_BP_conf,true_SOD_G,BP_of_true_SOD_G,pred_SOD_G,pred_SOD_G_conf,true_SOD_M,BP_of_true_SOD_M"
     }
-    NR>1 && ($15 == "head" || $16 == "head") && ($21+0 == 1.0) { 
+    NR>1 && ($15 == "head" || $16 == "head") && ($21+0 <= 2.0) { 
         # Print only the required columns
         print $1,$2,$3,$4,$15,$16,$17,$18,$19,$20,$21,$22,$23
         #print $21
