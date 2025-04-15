@@ -60,4 +60,26 @@ cut -d, -f4 ../stg4heads.csv | grep JPG | while read i; do cp $i .; done
 cammand to run example fine-tuner (must be run in image-classification folder)
 python run_image_classification.py --train_dir ../database --output_dir ../model/ --remove_unused_columns False --do_train --do_eval
 
+Stuff to research
+use CNNs for image to image
+top layer SVM a classifier
+fully connected layer classifies
 
+swap last layer with a classifier 
+
+Latest plans of action 
+Tuesday 
+    * data script
+    * skull face model research
+    * web ui
+    * github
+
+The Next Tuesday
+    * improve fine-tuining program
+    * testing and metrics
+    * skull-face matching
+
+Final stretch
+    * report
+    * presentation
+    * anything that needs to be done
