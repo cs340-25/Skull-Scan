@@ -20,7 +20,8 @@ Here are the commands to connect.
 ## Docker Details
 Our software is set up inside a docker container. [hub.docker.com](https://hub.docker.com/repository/docker/mylonjones/huggingface_transformers/general)
 
-* To start the image run `docker start -a -i skull1` this lets you run commands in the container
+* To start the image run `docker start -a -i skull3` this lets you run commands in the container
+* To run the front end server use `streamlit run frontEnd.py --server.port=8502` in the container then type `http://localhost8502` into your browser  
 * To create a new container from the image run `docker run -it --name skull1 -p8000:8000 mylonjones/huggingface_transformers bash`
 * To build a new image run `docker build -t <image-name> .` inside the docker_settings folder
 * To exit out of a container run `exit`
