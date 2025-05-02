@@ -32,6 +32,11 @@ The approach taken in this project starts with using an existing pre-trained mod
 
 ### Architecture:
 
+  * Hugging Face Libraries
+
+The Hugging Face Transformers library was used in this project to find and fine-tune models and facilitate image classification. Hugging Face is platform for sharing and finding machine learning models and data sets. They have open source software for interacting with their online repositories and using models and data sets. The code for this project was directly inspired from the image classification example in the Hugging Face Transformers repository. The library provides a user friendly way to load and split data, download models, fine-tune models, and run tasks such as image classification with those models. The most critical part of the library for the purposes of this project is the Trainer class which takes in the model, the data set, the image processor, and the collate function and other configurations. This class automates the fine-tuning which this project uses with the body farm data to classify images.
+(url)[https://huggingface.co/]
+
 ### Changes:
 
 ### Testing and Results:
@@ -52,7 +57,13 @@ Member roles changed throughout the development of the project just like the goa
 ## Project Management
 
 ### Goals Met
+The fundamental goals for this project were met. Namely, the software is successfully and accurately able to make classifications about stage of decomposition based on image input. The software is also sufficiently modular so it would be easy to add and test additional features. 
 
-#### Goals Deferred
+### Goals Deferred
+
+  * Inspiration for Continued Development
+
+Right now this project simply classifies an image into to a set of classes that indicate the stage of decomposition, but originally there were going to be many other features. The other features included classifying age at death, the sex of the subject, and the identity of the subject. Subject identification being an especially desirable achievement. If development were to move forward, determining subject identity would be the preeminent goal. Research suggested that this would likely involve something like a siamese network, which can be an effective approach for solving problems such as facial recognition and signature verification. The key benefit of a siamese network is that it can perform verification tasks on input such as a pair of images. Verification is similar to classification, but instead of having many classes, e.g. one for each id, it has two, same and different. The idea for our project would be to pair an image of a person decomposed and with of them not decomposed to establish identity. Albeit a siamese network may not be perfect for this task, but it would be an interesting pursuit.
+(url)[https://pyimagesearch.com/2020/11/23/building-image-pairs-for-siamese-networks-with-python/]
 
 ## Reflection
