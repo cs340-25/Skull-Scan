@@ -71,3 +71,8 @@ Right now this project simply classifies an image into to a set of classes that 
 [pyimagesearch.com](https://pyimagesearch.com/2020/11/23/building-image-pairs-for-siamese-networks-with-python/)
 
 ## Reflection
+
+Working on this project provided our team with valuable experience in applying machine learning to a real-world problem with forensic relevance. Throughout the
+project, we adapted to changing tools, shifting machine learning models, learning to build and use a docker container, and build a UI in python. This project
+challenged us to collaborate effectively, adjust roles as needed, and balance research with implementation. Most importantly, it sparked deeper interest in AI’s
+potential in forensic science — particularly in advancing toward future features like identity verification using models such as Siamese networks.
