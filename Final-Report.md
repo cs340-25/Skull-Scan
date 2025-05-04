@@ -32,12 +32,16 @@ The approach taken in this project starts with using an existing pre-trained mod
 
 ### Architecture:
 
-  * Hugging Face Libraries
+The software for this project runs on a Docker container on a remote machine. The Docker container contains the environment and dependencies necessary to fine-tune models and run classification tasks. The container has the user home directory from the remote machine mounted to allow for convenient transfer of files between the machine and container. Port 5023 is forwarded from the container to the machine to facilitate access to the web interface through ssh.
 
-The Hugging Face Transformers library was used in this project to find and fine-tune models and facilitate image classification. Hugging Face is platform for sharing and finding machine learning models and data sets. They have open source software for interacting with their online repositories and using models and data sets. The code for this project was directly inspired from the image classification example in the Hugging Face Transformers repository. The library provides a user friendly way to load and split data, download models, fine-tune models, and run tasks such as image classification with those models. The most critical part of the library for the purposes of this project is the Trainer class which takes in the model, the data set, the image processor, and the collate function and other configurations. This class automates the fine-tuning which this project uses with the body farm data to classify images.
+The software used to handle models, image data and fine-tuning came from the Hugging Face ecosystem. Hugging Face is platform for sharing and finding machine learning models and data sets. They have open source software for interacting with their online repositories and using models and data sets. The code for this project was directly inspired from the image classification example in the Hugging Face Transformers repository. The library provides a user friendly way to load and split data, download models, fine-tune models, and run tasks such as image classification with those models. The most critical part of the library for the purposes of this project is the Trainer class which takes in the model, the data set, the image processor, and the collate function and other configurations. This class automates the fine-tuning which this project uses with the body farm data to classify images.
 (url)[https://huggingface.co/]
 
+The web interface.
+
 ### Changes:
+
+Because the initial technology description was very general, in summary it said the major technology for this project would be AI models and Python, there were no changes to the technology choice. However, the specific technology used did evolve throughout development. Initially the image recognition tool was going to be CLIP by OpenAI. CLIP is also an image classification library, but it was not clear how to use it to train a model with the database data or if that was even a possibility. The CLIP readme file mentioned Hugging Face, which ended up being a better choice for this project. It was also determined that using Docker would be superior and more convenient than running the software directly on the remote machine.
 
 ### Testing and Results:
     
