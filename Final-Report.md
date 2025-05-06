@@ -20,6 +20,7 @@ The approach taken in this project starts with using an existing pre-trained mod
 
 ### The Changes:
 
+
 ### Results and Conclusions:
 
 
@@ -44,6 +45,22 @@ The web interface.
 Because the initial technology description was very general, in summary it said the major technology for this project would be AI models and Python, there were no changes to the technology choice. However, the specific technology used did evolve throughout development. Initially the image recognition tool was going to be CLIP by OpenAI. CLIP is also an image classification library, but it was not clear how to use it to train a model with the database data or if that was even a possibility. The CLIP readme file mentioned Hugging Face, which ended up being a better choice for this project. It was also determined that using Docker would be superior and more convenient than running the software directly on the remote machine.
 
 ### Testing and Results:
+After testing several models (Swin Transformer, DieT, Baseline CNN), we selected ConvNext as the final model due to its overall strongest performance across all stages of decomposition. The model was fine tuned on a labeled dataset from the BodyFarm, using an 85/15 train-validation split. 
+
+Here is a summary of classification accuracy across decompositon stages: 
+
+| Stage | True Group | ConvNeXt Accuracy | Notes                                                                                                  |
+| ----- | ---------- | ----------------- | ------------------------------------------------------------------------------------------------------ |
+| 1     | group1     | **99.2%**         | Correct                                                                                                |
+| 2     | group1     | **76.8%**         | Correct, but lower than Stage 1 due to overlap between early decomposition stages                      |
+| 3     | group2     | **92.5%**         | Correct                                                                                                |
+| 4     | group3     | **60%**           | Incorrect — most predictions were group2, indicating difficulty distinguishing mid-stage decomposition |
+| 5     | group3     | **96.5%**         | Correct                                                                                                |
+| 6     | group4     | **58%**           | Incorrect — commonly confused with group3                                                              |
+Overall Performance highlights
+* ConvNext outperformed other models on early and late decomposition stages, making it a strong candidate for real-world application.
+* Mid-stages remain challenging, likely due to visual similarity in features between neighboring classes
+* Average accuracy across all stages: approximately 80.5%
     
 
 ## Team
