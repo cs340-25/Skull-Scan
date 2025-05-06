@@ -57,6 +57,8 @@ Here is a summary of classification accuracy across decompositon stages:
 | 4     | group3     | **60%**           | Incorrect — most predictions were group2, indicating difficulty distinguishing mid-stage decomposition |
 | 5     | group3     | **96.5%**         | Correct                                                                                                |
 | 6     | group4     | **58%**           | Incorrect — commonly confused with group3                                                              |
+
+
 Overall Performance highlights
 * ConvNext outperformed other models on early and late decomposition stages, making it a strong candidate for real-world application.
 * Mid-stages remain challenging, likely due to visual similarity in features between neighboring classes
